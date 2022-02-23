@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: redis
-        image: me-jeddah-1.ocir.i/ax7dvcawpc84/portal-qa/switch-admin:53ea8a9da43fec9d54dc6453bdbf841bfed83b33
+        image: jed.ocir.io/axn7ptdy4wq0/test/redis:6.2.6-alpine
         ports:
         - containerPort: 80
