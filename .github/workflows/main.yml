@@ -17,10 +17,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: update container image 
-         ocirns=ax7dvcawpc84
-         OCIRRegion=me-jeddah-1.ocir.i
-         OCIRRepo=portal-qa
         run: |
+          ocirns="ax7dvcawpc84"
+          OCIRRegion=me-jeddah-1.ocir.i
+          OCIRRepo=portal-qa
           sed -i "/\\$ocirns/c\        image: me-jeddah-1.ocir.i/ax7dvcawpc84/portal-qa/switch-admin:latest3" simple-deployment/nginx-deploy.yaml
       - name: Update changes in GitHub repository
         run:  |
