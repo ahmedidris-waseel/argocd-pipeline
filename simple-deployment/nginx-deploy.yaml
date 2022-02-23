@@ -17,5 +17,3 @@ spec:
         image: me-jeddah-1.ocir.i/ax7dvcawpc84/portal-qa/switch-admin:3435435
         ports:
         - containerPort: 80
-test
-test
