@@ -21,7 +21,7 @@ jobs:
           OCIR_NameSpace="ax7dvcawpc84"
           OCIR_Region="me-jeddah-1.ocir.i"
           OCIR_Repo="portal-qa"
-          sed -i "/$OCIR_NameSpace/c\        image: $OCIR_Region/$OCIR_NameSpace/$OCIR_Repo/switch-admin:latest1" simple-deployment/nginx-deploy.yaml
+          sed -i "/$OCIR_NameSpace/c\        image: $OCIR_Region/$OCIR_NameSpace/$OCIR_Repo/switch-admin:${{ github.sha }}" simple-deployment/nginx-deploy.yaml
       - name: Update changes in GitHub repository
         run:  |
           User_Name="Portal Team"
@@ -29,6 +29,6 @@ jobs:
           git config --global user.name "$User_Name" 
           git config --global user.email "$User_Email"
           git add .
-          git commit -m "test"
+          git commit -m "Update Image Tag to ${{ github.sha }}"
           git push
  
