@@ -19,7 +19,7 @@ jobs:
       - name: update container image 
         run: |
           ls -al
-          sed -ie s/^"          "image:.*/"          "image:" "test/ simple-deployment/nginx-deploy.yaml
+          sed -i s/^"          "image:.*/"          "image:" "test/ simple-deployment/nginx-deploy.yaml
    
       - name: Update changes in GitHub repository
         run:  |
