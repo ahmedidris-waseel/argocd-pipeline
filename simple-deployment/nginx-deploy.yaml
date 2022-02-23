@@ -17,3 +17,4 @@ spec:
         image: jed.ocir.io/axn7ptdy4wq0/test/redis:6.2.6-alpine
         ports:
         - containerPort: 80
+test
