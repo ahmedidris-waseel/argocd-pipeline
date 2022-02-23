@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: update container image 
-        run: sed -ie s/^"          "image:.*/"          "image:" "me-jeddah-1.ocir.io\\/ax7dvcawpc84\\/portal-qa\\/switch-admin:latest/ deployment.yml
+        run: sed -ie s/^"          "image:.*/"          "image:" "me-jeddah-1.ocir.io\\/ax7dvcawpc84\\/portal-qa\\/switch-admin:latest/ ./simple-deployment/nginx-deploy.yaml
       - name: add file to stage
         run: git add .
       - name: add commit message
