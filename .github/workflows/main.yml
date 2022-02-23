@@ -17,9 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: update container image 
-         OCIR_NameSpace="ax7dvcawpc84"
-         OCIR_Region="me-jeddah-1.ocir.i"
-         OCIR_Repo="portal-qa"
+         OCIR_NameSpace=ax7dvcawpc84
+         OCIR_Region=me-jeddah-1.ocir.i
+         OCIR_Repo=portal-qa
         run: |
           sed -i "/$OCIR_NameSpace/c\        image: $OCIR_Region/$OCIR_NameSpace/$OCIR_Repo/switch-admin:latest2" simple-deployment/nginx-deploy.yaml
       - name: Update changes in GitHub repository
