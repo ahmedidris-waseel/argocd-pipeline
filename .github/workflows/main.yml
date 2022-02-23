@@ -19,7 +19,7 @@ jobs:
       - name: update container image 
         run: |
           ls -al
-          echo test >>  simple-deployment/nginx-deploy.yaml
+          sed -i "/ax7dvcawpc84/c\ image\: me-jeddah-1.ocir\.i/ax7dvcawpc84/portal-qa/switch-admin:3435435" simple-deployment/deployment.yml
    
       - name: Update changes in GitHub repository
         run:  |
