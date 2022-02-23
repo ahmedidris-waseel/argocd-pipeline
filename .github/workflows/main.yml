@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: update container image 
+      - name: Update Container Image Version
         run: |
           OCIR_NameSpace="ax7dvcawpc84"
           OCIR_Region="me-jeddah-1.ocir.i"
@@ -24,9 +24,10 @@ jobs:
           sed -i "/$OCIR_NameSpace/c\        image: $OCIR_Region/$OCIR_NameSpace/$OCIR_Repo/switch-admin:latest5" simple-deployment/nginx-deploy.yaml
       - name: Update changes in GitHub repository
         run:  |
-          ls -al
-          git config --global user.name 'Your Name' 
-          git config --global user.email 'Your Email for GitHub'
+          User_Name="Portal Team"
+          User_Email="altayebal@waseel.com"
+          git config --global user.name '$User_Name' 
+          git config --global user.email '$User_Email'
           git add .
           git commit -m "test"
           git push
