@@ -21,7 +21,7 @@ jobs:
           OCIR_NameSpace="ax7dvcawpc84"
           OCIR_Region="me-jeddah-1.ocir.i"
           OCIR_Repo="portal-qa"
-          sed -i "/$OCIR_NameSpace/c\        image: $OCIR_Region/$OCIR_NameSpace/$OCIR_Repo/switch-admin:latest" simple-deployment/nginx-deploy.yaml
+          sed -i "/$OCIR_NameSpace/c\        image: $OCIR_Region/$OCIR_NameSpace/$OCIR_Repo/switch-admin:latest1" simple-deployment/nginx-deploy.yaml
       - name: Update changes in GitHub repository
         run:  |
           User_Name="Portal Team"
