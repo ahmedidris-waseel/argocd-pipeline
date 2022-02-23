@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+jobs:
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: update container image 
+        run: sed -ie s/^"          "image:.*/"          "image:" "me-jeddah-1.ocir.io\\/ax7dvcawpc84\\/portal-qa\\/switch-admin:latest/ deployment.yml
+      - name: add file to stage
+        run: git add .
+      - name: add commit message
+        run: git commit -m "update image tag"
+      - name: push commit to repo
+        run: git push
+ 
