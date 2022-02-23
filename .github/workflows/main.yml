@@ -27,7 +27,7 @@ jobs:
           User_Name="Portal Team"
           User_Email="altayebal@waseel.com"
           git config --global user.name "$User_Name" 
-          git config --global user.email '\$User_Email'
+          git config --global user.email "$User_Email"
           git add .
           git commit -m "test"
           git push
