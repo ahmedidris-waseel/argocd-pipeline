@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: redis
- image: me-jeddah-1.ocir.i/ax7dvcawpc84/portal-qa/switch-admin:3435435
+ image:        me-jeddah-1.ocir.i/ax7dvcawpc84/portal-qa/switch-admin:3435435
         ports:
         - containerPort: 80
 test
