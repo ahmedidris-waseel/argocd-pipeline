@@ -18,9 +18,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: update container image 
         run: |
-          cd ./simple-deployment
           ls -al
-          sed -i "/ax7dvcawpc84/c\ image\: me-jeddah-1.ocir\.i/ax7dvcawpc84/portal-qa/switch-admin:3435435" ./simple-deployment/nginx-deploy.yaml
+          cat simple-deployment/nginx-deploy.yaml
+          ls -al
+          sed -i "/ax7dvcawpc84/c\ image\: me-jeddah-1.ocir\.i/ax7dvcawpc84/portal-qa/switch-admin:3435435" simple-deployment/nginx-deploy.yaml
           cat nginx-deploy.yaml
       - name: Update changes in GitHub repository
         run:  |
