@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: redis
-  replicas: 10  # tells deployment to run 2 pods matching the template
+  replicas: 5  # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
@@ -16,4 +16,4 @@ spec:
       - name: redis
         image: jed.ocir.io/axn7ptdy4wq0/test/redis:6.2.6-alpine
         ports:
-        - containerPort: 80
+        - containerPort: 90
